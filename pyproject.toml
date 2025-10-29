@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ci-doctor"
+version = "0.1.0"
+description = "CLI to diagnose CI pipeline runs"
+authors = [{ name = "Anders", email = "mail@andersj.io" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "typer==0.12.5",
+  "httpx==0.27.2",
+  "pydantic==2.9.2",
+  "rich==13.9.2",
+  "python-dotenv==1.0.1",
+]
+
+license = { file = "LICENSE" }
+keywords = ["ci", "github-actions", "diagnostics", "cli", "devops"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/andersjio/ci-doctor"
+Repository = "https://github.com/andersjio/ci-doctor"
+Issues = "https://github.com/andersjio/ci-doctor/issues"
+
+[project.optional-dependencies]
+ai = [
+  "openai>=1.0.0",
+]
+
+[project.scripts]
+ci-doctor = "ci_doctor.cli:main"
+cidoc = "ci_doctor.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+

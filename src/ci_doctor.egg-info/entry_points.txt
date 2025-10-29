@@ -1,0 +1,3 @@
+[console_scripts]
+ci-doctor = ci_doctor.cli:main
+cidoc = ci_doctor.cli:main
