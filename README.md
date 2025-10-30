@@ -7,13 +7,13 @@ A CLI that analyzes a GitHub Actions run URL and prints a compact diagnosis.
 Using pipx (recommended for CLI tools):
 
 ```bash
-pipx install cidoc
+pipx install ci-doctor
 ```
 
 Or with pip:
 
 ```bash
-pip install cidoc
+pip install ci-doctor
 ```
 
 ### Install (editable for dev)
